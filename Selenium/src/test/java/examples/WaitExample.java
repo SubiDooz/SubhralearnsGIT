@@ -18,7 +18,7 @@ public class WaitExample extends ChromeDriverBuilder{
 		driver.findElement(By.cssSelector("div#checkbox input")).click();
 		driver.findElement(By.cssSelector("form#checkbox-example button")).click();
 		
-		WebDriverWait exWait = new WebDriverWait(driver, 10);
+		WebDriverWait exWait = new WebDriverWait(driver, 5);
 		WebElement actual = exWait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("form#checkbox-example p#message"))));
 		
 		Assert.assertTrue(actual.isDisplayed());
